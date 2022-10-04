@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Matt Westehaus: Projects</title>
+	<link rel="stylesheet" href="/css/foundation.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="off-canvas-wrapper show-for-large">
+        <div class="grid-container"  >
+            
+		<div class ="grid-x grid-padding-x" data-sticky data-margin-top="0">
+        <div class="cell small-12 large-2 menu_style" ><a href="/index.html">Home</a></div>
+        <div class="cell small-12 large-2 menu_style" ><a href="projects.html">Projects</a></div>
+        <div class="cell small-12 large-2 menu_style" ><a href="resume.html">Resume</a></div>
+        <div class="cell small-12 large-2 menu_style" ><a href="fun.html">Fun Stuff</a></div>
+        </div>
+	</div>
+</div>
+
+
+
+
+<div class="off-canvas-wrapper hide-for-large">
+	<!-- Your menu or Off-canvas content goes here -->
+	<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+		<!-- Close button -->
+		<button class="close-button" aria-label="Close menu" type="button" data-close>
+			<span aria-hidden="true">&times;</span>
+		</button>
+
+		<!-- Menu -->
+		<ul class="vertical menu">
+            <li> <p id="menu_item"> Pages </p></li>
+			<li><a href="/index.html" class="menu_style">Home Page</a></li>
+			<li><a href="projects.html" class="menu_style">Projects</a></li>
+			<li><a href="resume.html" class="menu_style">Resume</a></li>
+			<li><a href="fun.html" class="menu_style">Fun Stuff</a></li>
+		</ul>
+	</div>
+	<div>
+		<!-- main content within a `grid-container` -->
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<button type="button" class="cell large-auto button " data-toggle="offCanvas">Open Menu</button>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+   
+
+<div class="grid-container">
+	<div class="grid-x grid-padding-x">
+		<div class="cell small-12 large-6">Projects!</div>
+	</div>
+	
+</div>
+<p id='homepage'>
+	
+</p>
+<!-- include before closing <body> tag -->
+<script src="/js/vendor.js"></script>
+<script src="/js/foundation.js"></script>
+<script type="application/javascript">
+	$(document).foundation();
+</script>
+</body>
+</html>
+

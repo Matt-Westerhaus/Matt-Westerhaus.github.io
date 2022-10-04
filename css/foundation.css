@@ -2794,6 +2794,7 @@ a.button:hover, a.button:focus {
   .close-button.medium, .close-button {
     right: 1rem;
     top: 0.5rem;
+    bottom: 100rem;
     font-size: 2em;
     line-height: 1; }
 
@@ -4531,7 +4532,7 @@ a.thumbnail {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background: #e6e6e6; }
+  background: #182747; }
   [data-whatinput='mouse'] .off-canvas {
     outline: 0; }
   .off-canvas.is-transition-push {
