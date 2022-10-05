@@ -5,6 +5,11 @@ body{
     font-size: 20px;
     color: #D8D8D8;
 }
+
+p {
+    text-align: center;
+}
+
 .menu_style {
     border: solid #D8D8D8;
     border-radius: 15rem;
