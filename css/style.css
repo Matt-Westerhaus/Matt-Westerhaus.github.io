@@ -1,7 +1,7 @@
 
 body{
     background-color: #182747;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Able, Arial Narrow, Arial, sans-serif;
     font-size: 20px;
     color: #D8D8D8;
 }
@@ -13,8 +13,6 @@ body{
     margin:0.3rem 1rem;
     }
 
-
-
 h1 {
     font-size: 2rem;
 }
@@ -24,11 +22,14 @@ h1 {
     border: .65rem solid #D8D8D8;
 }
 
+ul {
+    line-height: 1rem;
+    padding-left: 20px;
+}
+
 li {
     margin-bottom:.75rem
 }
-
-
 
 #menu_item {
     background-color: #182747;
@@ -56,35 +57,46 @@ li {
     border-bottom: solid black .05em;
     font-family: 'Able';
     margin-bottom: 0%;
-    background-color: #C6EBC5;
-    color: black;
 }
 .index_paragraphs{
-    background-color: #C6EBC5;
     font-family: Able;
     text-align: center;
     line-height: 1.2em;
     border: solid #D8D8D8 .05em;
-    color: black;
     
 }
 
 
 a:link {
-    color:black;
+    
+    color:#D8D8D8;
     font-family:Able;
+    font-weight: bold;
 }
 a:visited, a:active {
-    color: black;
+    color: #D8D8D8;
     font-family:Able;
+    font-weight: bold;
 }
 a:hover, a:focus {
     color:#932432;
     font-family:Able;
     text-decoration: underline;
+    font-weight: bold;
 }
 
+#resume_title {
+    line-height: 1.2em;
+    text-align: right;
+    font-size: .75em;
+    font-family: Able;
+}
 
+.resume_header {
+    border-bottom: .05em solid #C6EBC5;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
 /*
 Forget Name: #e6e6e6
 
@@ -101,3 +113,4 @@ Purple Tinged Grey: #283747*/
 #562B08
 #647E68
 #D8D8D8 */
+
