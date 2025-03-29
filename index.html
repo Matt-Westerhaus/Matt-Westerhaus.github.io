@@ -1,138 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="scroll-smooth">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Matt Westehaus: Home</title>
-	<link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/style.css">
+	<title>Matt Westerhaus | Software Engineer</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						primary: '#2563eb',
+						secondary: '#1e40af',
+						dark: '#0f172a',
+					},
+					fontFamily: {
+						sans: ['Inter', 'sans-serif'],
+					},
+				}
+			}
+		}
+	</script>
+	<style>
+		.gradient-text {
+			background: linear-gradient(45deg, #2563eb, #1e40af);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	</style>
 </head>
-<body>
-    <div class="off-canvas-wrapper show-for-large">
-            <div class="grid-container"  >
+<body class="bg-slate-50 text-slate-800">
+	<!-- Navigation -->
+	<nav class="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between h-16">
+				<div class="flex items-center">
+					<a href="#" class="text-xl font-bold gradient-text">MW</a>
+				</div>
+				<div class="hidden md:flex items-center space-x-8">
+					<a href="#about" class="text-slate-600 hover:text-primary transition-colors">About</a>
+					<a href="#experience" class="text-slate-600 hover:text-primary transition-colors">Experience</a>
+					<a href="#contact" class="text-slate-600 hover:text-primary transition-colors">Contact</a>
+					<a href="/pages/resume.html" class="px-4 py-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors">Resume</a>
+				</div>
+				<div class="md:hidden flex items-center">
+					<button id="mobile-menu-button" class="text-slate-600">
+						<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Mobile menu -->
+		<div id="mobile-menu" class="hidden md:hidden bg-white">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<a href="#about" class="block px-3 py-2 text-slate-600 hover:text-primary transition-colors">About</a>
+				<a href="#experience" class="block px-3 py-2 text-slate-600 hover:text-primary transition-colors">Experience</a>
+				<a href="#contact" class="block px-3 py-2 text-slate-600 hover:text-primary transition-colors">Contact</a>
+				<a href="/pages/resume.html" class="block px-3 py-2 text-slate-600 hover:text-primary transition-colors">Resume</a>
+			</div>
+		</div>
+	</nav>
 
-                <div class ="grid-x grid-padding-x" data-sticky data-margin-top="0">
-                    <div class="cell large-2 menu_style " ><a style="color:black;" href="index.html">Home</a></div>
-                    <div class="cell large-2 menu_style" ><a style="color:black;" href="pages/projects.html">Projects</a></div>
-                    <div class="cell large-2 menu_style" ><a style="color:black;" href="pages/resume.html">Resume</a></div>
-                    <div class="cell large-2 menu_style" ><a style="color:black;" href="pages/fun.html">Fun Stuff</a></div>
-                </div>
-            </div>
-    </div>
+	<!-- Hero Section -->
+	<section class="pt-32 pb-20 md:pt-40 md:pb-32">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid md:grid-cols-2 gap-12 items-center">
+				<div>
+					<h1 class="text-4xl md:text-5xl font-bold mb-6">
+						Hi, I'm <span class="gradient-text">Matt Westerhaus</span>
+					</h1>
+					<p class="text-xl text-slate-600 mb-8">
+						Data Engineer at Optum, passionate about building scalable solutions and turning data into insights.
+					</p>
+					<div class="flex space-x-4">
+						<a href="#contact" class="px-6 py-3 rounded-full bg-primary text-white hover:bg-secondary transition-colors">
+							Get in touch
+						</a>
+						<a href="/pages/resume.html" class="px-6 py-3 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors">
+							View Resume
+						</a>
+					</div>
+				</div>
+				<div class="relative">
+					<div class="aspect-square rounded-full overflow-hidden shadow-xl">
+						<img src="/pictures/Headshot.jpg" alt="Matt Westerhaus" class="w-full h-full object-cover">
+					</div>
+					<div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
+						<p class="text-sm font-medium">Currently working at</p>
+						<p class="text-primary font-bold">Optum TDP</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<!-- About Section -->
+	<section id="about" class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
+			<div class="grid md:grid-cols-2 gap-12">
+				<div class="space-y-6">
+					<div class="bg-slate-50 p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3">Background</h3>
+						<p class="text-slate-600">
+							Originally from Chanhassen, MN, I graduated with a degree in Computer Science and a minor in Catholic Studies. 
+							My journey in tech started with a high school HTML/JavaScript class, which sparked my passion for development.
+						</p>
+					</div>
+					<div class="bg-slate-50 p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3">Education</h3>
+						<p class="text-slate-600">
+							Computer Science Major<br>
+							Catholic Studies Minor<br>
+							University of St. Thomas
+						</p>
+					</div>
+				</div>
+				<div class="space-y-6">
+					<div class="bg-slate-50 p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3">Current Role</h3>
+						<p class="text-slate-600">
+							As a Data Engineer in Optum's Technology Development Program (TDP), I work on building scalable data solutions
+							and contributing to healthcare technology innovation.
+						</p>
+					</div>
+					<div class="bg-slate-50 p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3">Interests</h3>
+						<p class="text-slate-600">
+							Beyond coding, I'm passionate about exploring technology's impact on healthcare, continuous learning,
+							and finding ways to make complex systems more efficient.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<!-- Experience Section -->
+	<section id="experience" class="py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold mb-12 text-center">Experience</h2>
+			<div class="space-y-8">
+				<div class="bg-white p-6 rounded-lg shadow-sm">
+					<div class="flex justify-between items-start mb-4">
+						<div>
+							<h3 class="text-xl font-semibold">Data Engineer</h3>
+							<p class="text-primary">Optum - Technology Development Program</p>
+						</div>
+						<span class="text-slate-500">2023 - Present</span>
+					</div>
+					<p class="text-slate-600">
+						Working on building scalable data solutions and contributing to healthcare technology innovation
+						through Optum's specialized development program.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<!-- Contact Section -->
+	<section id="contact" class="py-20 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold mb-12 text-center">Get in Touch</h2>
+			<div class="max-w-2xl mx-auto text-center">
+				<p class="text-slate-600 mb-8">
+					Interested in connecting? Feel free to reach out through any of these platforms.
+				</p>
+				<div class="flex justify-center space-x-6">
+					<a href="https://www.linkedin.com/in/matt-westerhaus" target="_blank" rel="noopener noreferrer" 
+					   class="px-6 py-3 rounded-full bg-primary text-white hover:bg-secondary transition-colors">
+						LinkedIn
+					</a>
+					<a href="mailto:your.email@example.com" 
+					   class="px-6 py-3 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors">
+						Email
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<!-- Footer -->
+	<footer class="bg-slate-900 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<p class="text-slate-400">© 2024 Matt Westerhaus. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
 
-    <div class="off-canvas-wrapper hide-for-large">
-        <!-- Your menu or Off-canvas content goes here -->
-        <div class="off-canvas position-left" id="offCanvas" data-off-canvas >
-            <!-- Close button -->
-            <button class="close-button" aria-label="Close menu" type="button" style="color: #D8D8D8;" data-close>
-                <span aria-hidden="true">&times;</span>
-            </button>
+	<script>
+		// Mobile menu toggle
+		const mobileMenuButton = document.getElementById('mobile-menu-button');
+		const mobileMenu = document.getElementById('mobile-menu');
 
-            <!-- Menu -->
-            <ul class="vertical menu">
-                <li> <p id="menu_item"> Pages </p></li>
-                <li><a style="color:black;" href="index.html" class="menu_style">Home Page</a></li>
-                <li><a style="color:black;" href="pages/projects.html" class="menu_style">Projects</a></li>
-                <li><a style="color:black;" href="pages/resume.html" class="menu_style">Resume</a></li>
-                <li><a style="color:black;" href="pages/fun.html" class="menu_style">Fun Stuff</a></li>
-            </ul>
-        </div>
-        <div>
-            <!-- main content within a `grid-container` -->
-            <div class="grid-container" >
-                <div class="grid-x grid-padding-x" data-sticky data-margin-top="0">
-                    <button type="button" class="cell large-auto button" data-toggle="offCanvas" >Open Menu</button>
-                </div>
-            </div>
-        </div>
-        
-    </div>
+		mobileMenuButton.addEventListener('click', () => {
+			mobileMenu.classList.toggle('hidden');
+		});
 
-       
+		// Close mobile menu when clicking a link
+		const mobileLinks = mobileMenu.querySelectorAll('a');
+		mobileLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				mobileMenu.classList.add('hidden');
+			});
+		});
 
-    <div class="grid-container show-for-large" >
-        <div class="grid-x grid-padding-x" data-sticky data-margin-top="3">
-            <div class="cell small-12 large-6" ><img src="/pictures/Headshot.jpg" class="headshot" alt="My Profile Picture"></div>
-            <div class="cell small-12 large-6" >
-                <h1 id="name_title">&nbsp;&nbsp;&nbsp;&nbsp;Matt Westerhaus &nbsp;&nbsp;&nbsp;&nbsp; </h1>
-                <p>
-                    <h2 class="paragraph_title">About Me</h2>
-                    <p class="index_paragraphs">
-                        I am from Chanhassen, MN which is about 25-30 minutes southwest from St. Thomas. I am currently in my last semester here at 
-                        St. Thomas as I am graduating in December.
-                        
-                    </p>
-                    
-                </p>
-                <p>
-                    <h2 class="paragraph_title">Major & Minor</h2>
-                    <p class="index_paragraphs">
-                        I am a Computer Science major with a Catholic Studies minor. I chose Computer Science because I have always enjoyed technology 
-                        and how it works. I took a simple HTML/ Javascrip class in high school to test it out and found that I really enjoyed it. <br>
-                        I am a Catholic Studies minor to explore my faith a lot deeper.
-                    </p>
-                </p>
-                <p>
-                    <h2 class="paragraph_title">After College</h2>
-                    <p class="index_paragraphs">
-                        After I graduate, I am taking January-July off to possibly travel and to prepare for having a full-time job. In July I will be working full time 
-                        in <a href="https://www.optum.com/about-us.html" target="_blank">Optum's</a> 
-                        <a href="https://careers.unitedhealthgroup.com/early-careers-2/programs/technology-development-program/" target="_blank">Technology Development Program (TDP)</a>   
-                        as a Data Engineer.
-                    </p>
-                </p>
-            </div>
-        </div>   
-    </div>
-
-    <div class="grid-container hide-for-large" data sticky data-margin-top="0">
-        <div class="grid-x grid-padding-x">
-            <div class="cell small-12 large-6" ><img src="/pictures/Headshot.jpg" class="headshot" alt="My Profile Picture"></div>
-            <div class="cell small-12 large-6" >
-                <h1 id="name_title">Matt Westerhaus</h1>
-                <p>
-                    <h2 class="paragraph_title">About Me</h2>
-                    <p class="index_paragraphs">
-                        I am from Chanhassen, MN which is about 25-30 minutes southwest from St. Thomas. I am currently in my last semester here at 
-                        St. Thomas as I am graduating in December.
-                        
-                    </p>
-                    
-                </p>
-                <p>
-                    <h2 class="paragraph_title">Major & Minor</h2>
-                    <p class="index_paragraphs">
-                        I am a Computer Science major with a Catholic Studies minor. I chose Computer Science because I have always enjoyed technology 
-                        and how it works. I took a simple HTML/ Javascrip class in high school to test it out and found that I really enjoyed it. <br>
-                        I am a Catholic Studies minor to explore my faith a lot deeper.
-                    </p>
-                </p>
-                <p>
-                    <h2 class="paragraph_title">After College</h2>
-                    <p class="index_paragraphs">
-                        After I graduate, I am taking January-July off to travel and prepare for having a real job. In July I will be working full time 
-                        in <a href="https://www.optum.com/about-us.html">Optum's</a> <a href="https://careers.unitedhealthgroup.com/early-careers-2/programs/technology-development-program/">Technology Development Program (TDP)</a>.   
-                    </p>
-                </p>
-            </div>
-        </div>   
-    </div>
-
-    
-        
-        
-        
-        
-    </p>
-    <!-- include before closing <body> tag -->
-    <script src="js/vendor.js"></script>
-    <script src="js/foundation.js"></script>
-    <script type="application/javascript">
-        $(document).foundation();
-    </script>
+		// Smooth scroll for navigation links
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
+	</script>
 </body>
 </html>

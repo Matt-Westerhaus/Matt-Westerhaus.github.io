@@ -1,229 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="scroll-smooth">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Matt Westehaus: Resume</title>
-	<link rel="stylesheet" href="/css/foundation.css">
-    <link rel="stylesheet" href="/css/style.css">
+	<title>Matt Westerhaus | Resume</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						primary: '#2563eb',
+						secondary: '#1e40af',
+						dark: '#0f172a',
+					},
+					fontFamily: {
+						sans: ['Inter', 'sans-serif'],
+					},
+				}
+			}
+		}
+	</script>
+	<style>
+		.gradient-text {
+			background: linear-gradient(45deg, #2563eb, #1e40af);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	</style>
 </head>
-<body>
-    <div class="off-canvas-wrapper show-for-large">
-        <div class="grid-container"  >
-            
-		<div class ="grid-x grid-padding-x" data-sticky data-margin-top="0">
-        <div class="cell small-12 large-2 menu_style" ><a style="color:black;" href="/index.html">Home</a></div>
-        <div class="cell small-12 large-2 menu_style" ><a style="color:black;" href="projects.html">Projects</a></div>
-        <div class="cell small-12 large-2 menu_style" ><a style="color:black;" href="resume.html">Resume</a></div>
-        <div class="cell small-12 large-2 menu_style" ><a style="color:black;" href="fun.html">Fun Stuff</a></div>
-        </div>
-	</div>
-</div>
-
-
-
-
-<div class="off-canvas-wrapper hide-for-large">
-	<!-- Your menu or Off-canvas content goes here -->
-	<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
-		<!-- Close button -->
-		<button class="close-button" aria-label="Close menu" type="button" data-close>
-			<span aria-hidden="true">&times;</span>
-		</button>
-
-		<!-- Menu -->
-		<ul class="vertical menu">
-			<li> <p id="menu_item"> Pages </p></li>
-			<li><a style="color:black;" href="/index.html" class="menu_style">Home Page</a></li>
-			<li><a style="color:black;" href="projects.html" class="menu_style">Projects</a></li>
-			<li><a style="color:black;" href="resume.html" class="menu_style">Resume</a></li>
-			<li><a style="color:black;" href="fun.html" class="menu_style">Fun Stuff</a></li>
-		</ul>
-	</div>
-	<div>
-		<!-- main content within a `grid-container` -->
-		<div class="grid-container">
-			<div class="grid-x grid-padding-x">
-				<button type="button" class="cell large-auto button " data-toggle="offCanvas">Open Menu</button>
+<body class="bg-slate-50 text-slate-800">
+	<!-- Navigation -->
+	<nav class="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between h-16">
+				<div class="flex items-center">
+					<a href="/" class="text-xl font-bold gradient-text">MW</a>
+				</div>
+				<div class="hidden md:flex items-center space-x-8">
+					<a href="/" class="text-slate-600 hover:text-primary transition-colors">Home</a>
+					<a href="/pages/resume.html" class="text-primary font-medium">Resume</a>
+					<a href="mailto:your.email@example.com" class="px-4 py-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors">
+						Contact Me
+					</a>
+				</div>
+				<div class="md:hidden flex items-center">
+					<button id="mobile-menu-button" class="text-slate-600">
+						<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+						</svg>
+					</button>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-</div>
-<div class="cell small-12 page_title"> Resume</div>
-   <!-- Large Version-->
-
-<div class="grid-container show-for-large">
-	
-	<div class="grid-x grid-padding-x">
-		<div class="cell small-12" id="resume_title" style="margin-top: .5em; font-size: 1.5em;">Matt Westerhaus</div>
-		<div class="cell small-12" id="resume_title">Chanhassen, MN 55317</div>
-		<div class="cell small-12" id="resume_title">west1114@stthomas.edu, 612-242-4506</div>
-		<div class="cell small-12" id="resume_title" style="border-bottom: 1em double #C6EBC5;"><a style="color:white; " href="https://www.linkedin.com/in/matt-westerhaus-777676194/" target="_blank">https://www.linkedin.com/in/matt-westerhaus-777676194/ </a></div>
-	</div>
-
-
-	<div class="grid-x grid-padding-x" >
-		<div class="cell large-12 resume_header"> Education</div>
-		<div class="cell large-6">		
-			<ul>
-				<li> University of St. Thomas, St. Paul Minnesota </li>
-				<li> Bachelor of Science in Information and Computer Science </li>
-				<li> Dean's List </li>
-			</ul>
-		</div>											
-		<div class="cell large-6" style="text-align: right; "> Graduation: December 2022 <br> GPA: 3.60 <br> Earned: Spring ’20,’21,’22, Fall ‘21</div>
-	</div>
-	
-	<div class="grid-x grid-padding-x" >
-		<div class="cell large-12 resume_header"> Relevant Skills</div>
-		<div class="cell large-6">Computer: <ul > <li>Java</li> <li >Python</li> <li>HTML</li> <li>CSS</li> <li>JavaScript</li> <li>SQL</li> <li>GitHub</li> </ul></div>
-		<div class="cell large-6"> Occupational: <uL> <li>Agile Methodology</li> <li>Leadership</li> <li>Teamwork</li> <li>Communication</li> <li>Problem Solving</li> <li>Flexibility</li> </uL></div>
-	</div>
-	
-	<div class="grid-x grid-padding-x" >
-		<div class="cell large-12 resume_header"> Experience</div>
-		<div class="cell large-8"> 
-			<a href="https://www.optum.com/about-us.html" target="_blank" style="color: #D8D8D8">Optum</a>, <i>Technology Development Program Intern</i> – Synthetic Data Team 
-			<ul>
-				<li>Worked on a team of developers to create an open source data preprocessing library in Python</li>
-				<li>Developed in an Agile Development setting</li>
-				<li>Collaborated with others using GitHub, Rally, and in daily tech standups </li>
-				<li>Presented our project bi-weekly demos</li>
-			</ul>
+		<!-- Mobile menu -->
+		<div id="mobile-menu" class="hidden md:hidden bg-white">
+			<div class="px-2 pt-2 pb-3 space-y-1">
+				<a href="/" class="block px-3 py-2 text-slate-600 hover:text-primary transition-colors">Home</a>
+				<a href="/pages/resume.html" class="block px-3 py-2 text-primary font-medium">Resume</a>
+				<a href="mailto:your.email@example.com" class="block px-3 py-2 text-slate-600 hover:text-primary transition-colors">Contact</a>
+			</div>
 		</div>
-		<div class="cell large-4" style="text-align: right;"> June 2022 – August 2022</div>
+	</nav>
 
-		<div class="cell large-8"> 
-			<a href="https://www.chick-fil-a.com/careers" target="_blank" style="color: #D8D8D8">Chick-fil-A</a>, <i>Front of House and Back of House Manager</i>, Chanhassen, MN 
-			<ul> 
-				<li>Used communication skills to lead a team of about 130 people in a fast-paced environment. </li>
-				<li>Developed the ability to multitask on many things while still maintaining quality.  </li>
-				<li>Practiced conflict resolution daily among team members and with customers. </li>
-				<li>Problem solved with leadership members to find the best solutions. </li>
-			</ul>
-		</div> 
-		<div class="cell large-4" style="text-align: right;"> June 2017 – August 2021</div>
-		
-		<div class="cell large-8"> 
-			<a href="https://www.stthomas.edu/"  target="_blank" style="color: #D8D8D8">University of St. Thomas</a>, <i>Residential Advisor</i>, St. Paul, MN 
-			<ul>
-				<li>Fostered relationships and growth among 40 residents. </li>
-				<li>Planned and executed events involving all residents in the building. </li>
-				<li>Managed conflict in a way that works best for all parties. </li>
-				<li>Reported feedback to directors </li>
-			</ul>
-		</div> 
-		<div class="cell large-4" style="text-align: right;"> August 2021 – May 2022</div>
-	</div>
+	<!-- Resume Content -->
+	<main class="pt-24 pb-20">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- Header -->
+			<div class="text-center mb-12">
+				<h1 class="text-4xl font-bold mb-4">Matt Westerhaus</h1>
+				<p class="text-xl text-slate-600">Data Engineer at Optum</p>
+				<div class="flex justify-center space-x-4 mt-4">
+					<a href="mailto:your.email@example.com" class="text-primary hover:text-secondary transition-colors">
+						your.email@example.com
+					</a>
+					<span class="text-slate-300">|</span>
+					<a href="https://www.linkedin.com/in/matt-westerhaus" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary transition-colors">
+						LinkedIn
+					</a>
+				</div>
+			</div>
 
-	<div class="grid-x grid-padding-x" >
-		<div class="cell large-12 resume_header"> Awards</div>
-		<div class="cell large-8"> 
-			<ul>
-				<li style="margin-top: .5rem;"><i>Eagle Scout</i>, <a href="https://www.scouting.org/"  target="_blank" style="color: #D8D8D8">Boy Scouts of America</a>  </li>
-				<li><i>National Youth Leadership Training</i>, Northern Star Council  </li>
-			</ul>
-		</div> 
-		<div class="cell large-4" style="text-align: right;"> Year Earned: 2018 <br> July 2014</div>
-	
-	</div>
-</div>
+			<!-- Experience -->
+			<section class="mb-12">
+				<h2 class="text-2xl font-bold mb-6 pb-2 border-b border-slate-200">Professional Experience</h2>
+				<div class="space-y-6">
+					<div>
+						<div class="flex justify-between items-start mb-2">
+							<div>
+								<h3 class="text-xl font-semibold">Data Engineer</h3>
+								<p class="text-primary">Optum - Technology Development Program</p>
+							</div>
+							<span class="text-slate-500">2023 - Present</span>
+						</div>
+						<p class="text-slate-600">
+							Working on building scalable data solutions and contributing to healthcare technology innovation
+							through Optum's specialized development program.
+						</p>
+					</div>
+				</div>
+			</section>
 
+			<!-- Education -->
+			<section class="mb-12">
+				<h2 class="text-2xl font-bold mb-6 pb-2 border-b border-slate-200">Education</h2>
+				<div class="space-y-6">
+					<div>
+						<div class="flex justify-between items-start mb-2">
+							<div>
+								<h3 class="text-xl font-semibold">University of St. Thomas</h3>
+								<p class="text-primary">Bachelor of Science in Computer Science</p>
+								<p class="text-slate-600">Minor in Catholic Studies</p>
+							</div>
+							<span class="text-slate-500">2023</span>
+						</div>
+					</div>
+				</div>
+			</section>
 
-<!-- Small Version-->
-
-<div class="grid-container hide-for-large">
-	<div class="grid-x grid-padding-x">
-		<div class="cell small-12" id="resume_title" style="margin-top: .5em; font-size: 1.5em;">Matt Westerhaus</div>
-		<div class="cell small-12" id="resume_title">Chanhassen, MN 55317</div>
-		<div class="cell small-12" id="resume_title">west1114@stthomas.edu, 612-242-4506</div>
-		<div class="cell small-12" id="resume_title" style="border-bottom: 1em double #C6EBC5;"><a style="color:white; " href="https://www.linkedin.com/in/matt-westerhaus-777676194/" target="_blank">https://www.linkedin.com/in/matt-westerhaus-777676194/ </a></div>
-	</div>
-
-
-	<div class="grid-x grid-padding-x" >
-		<div class="cell large-12 resume_header"> Education</div>
-		<div class="cell large-6">		
-			<ul>
-				<li> University of St. Thomas, St. Paul Minnesota: Graduation: December 2022</li>
-				<li> Bachelor of Science in Information and Computer Science: GPA: 3.60</li>
-				<li> Dean's List: Spring ’20,’21,’22, Fall ‘21 </li>
-			</ul>
-		</div>											
-	</div>
-	
-	<div class="grid-x grid-padding-x" >
-		<div class="cell large-12 resume_header"> Relevant Skills</div>
-		<div class="cell large-6">Computer: <ul > <li>Java</li> <li >Python</li> <li>HTML</li> <li>CSS</li> <li>JavaScript</li> <li>SQL</li> <li>GitHub</li> </ul></div>
-		<div class="cell large-6"> Occupational: <uL> <li>Agile Methodology</li> <li>Leadership</li> <li>Teamwork</li> <li>Communication</li> <li>Problem Solving</li> <li>Flexibility</li> </uL></div>
-	</div>
-	
-	<div class="grid-x grid-padding-x" >
-		<div class="cell large-12 resume_header"> Experience</div>
-		<div class="cell large-8"> 
-			<a href="https://www.optum.com/about-us.html" target="_blank" style="color: #D8D8D8">Optum</a>, <i>Technology Development Program Intern</i> – Synthetic Data Team: June 2022 – August 2022 
-			<ul>
-				<li>Worked on a team of developers to create an open source data preprocessing library in Python</li>
-				<li>Developed in an Agile Development setting</li>
-				<li>Collaborated with others using GitHub, Rally, and in daily tech standups </li>
-				<li>Presented our project bi-weekly demos</li>
-			</ul>
+			<!-- Skills -->
+			<section class="mb-12">
+				<h2 class="text-2xl font-bold mb-6 pb-2 border-b border-slate-200">Technical Skills</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div>
+						<h3 class="text-lg font-semibold mb-3">Programming Languages</h3>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1 bg-slate-100 rounded-full text-slate-700">Python</span>
+							<span class="px-3 py-1 bg-slate-100 rounded-full text-slate-700">SQL</span>
+							<span class="px-3 py-1 bg-slate-100 rounded-full text-slate-700">Java</span>
+							<span class="px-3 py-1 bg-slate-100 rounded-full text-slate-700">JavaScript</span>
+						</div>
+					</div>
+					<div>
+						<h3 class="text-lg font-semibold mb-3">Technologies & Tools</h3>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1 bg-slate-100 rounded-full text-slate-700">Data Engineering</span>
+							<span class="px-3 py-1 bg-slate-100 rounded-full text-slate-700">ETL</span>
+							<span class="px-3 py-1 bg-slate-100 rounded-full text-slate-700">Big Data</span>
+							<span class="px-3 py-1 bg-slate-100 rounded-full text-slate-700">Cloud Computing</span>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
+	</main>
 
-		<div class="cell large-8"> 
-			<a href="https://www.chick-fil-a.com/careers" target="_blank" style="color: #D8D8D8">Chick-fil-A</a>, <i>Front of House and Back of House Manager</i>, Chanhassen, MN: June 2017 – August 2021
-			<ul> 
-				<li>Used communication skills to lead a team of about 130 people in a fast-paced environment. </li>
-				<li>Developed the ability to multitask on many things while still maintaining quality.  </li>
-				<li>Practiced conflict resolution daily among team members and with customers. </li>
-				<li>Problem solved with leadership members to find the best solutions. </li>
-			</ul>
-		</div> 
+	<!-- Footer -->
+	<footer class="bg-slate-900 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<p class="text-slate-400">© 2024 Matt Westerhaus. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
 
-		
-		<div class="cell large-8"> 
-			<a href="https://www.stthomas.edu/"  target="_blank" style="color: #D8D8D8">University of St. Thomas</a>, <i>Residential Advisor</i>, St. Paul, MN: August 2021 – May 2022
-			<ul>
-				<li>Fostered relationships and growth among 40 residents. </li>
-				<li>Planned and executed events involving all residents in the building. </li>
-				<li>Managed conflict in a way that works best for all parties. </li>
-				<li>Reported feedback to directors </li>
-			</ul>
-		</div> 
-	</div>
+	<script>
+		// Mobile menu toggle
+		const mobileMenuButton = document.getElementById('mobile-menu-button');
+		const mobileMenu = document.getElementById('mobile-menu');
 
-	<div class="grid-x grid-padding-x" >
-		<div class="cell large-12 resume_header"> Awards</div>
-		<div class="cell large-8"> 
-			<ul>
-				<li style="margin-top: .5rem;"><i>Eagle Scout</i>, <a href="https://www.scouting.org/"  target="_blank" style="color: #D8D8D8">Boy Scouts of America</a>: Year Earned: 2018</li>
-				<li><i>National Youth Leadership Training</i>, Northern Star Council: July 2014  </li>
-			</ul>
-		</div> 
+		mobileMenuButton.addEventListener('click', () => {
+			mobileMenu.classList.toggle('hidden');
+		});
 
-	
-	</div>
-
-
-
-<div class="grid-x grid-padding-x" >
-	<div class="cell large-12 resume_header"> Campus and Community Involvement</div>
-	<div class="cell large-8"> 
-		<ul>
-			<li style="margin-top: .5rem;">Computer Science Club: August 2021 - Present </li>
-			<li>Big Brothers Big Sisters of America, <i>Big Brother</i>, St. Paul Minnesota: November 2019 - September 2020  </li>
-			<li>Torch Youth Group Leader: June 2019- August 2019</li>
-		</ul>
-	</div> 
-</div>
-
-<!-- include before closing <body> tag -->
-<script src="/js/vendor.js"></script>
-<script src="/js/foundation.js"></script>
-<script type="application/javascript">
-	$(document).foundation();
-</script>
+		// Close mobile menu when clicking a link
+		const mobileLinks = mobileMenu.querySelectorAll('a');
+		mobileLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				mobileMenu.classList.add('hidden');
+			});
+		});
+	</script>
 </body>
 </html>
 
